@@ -22,6 +22,8 @@ public static WebDriver driver;
 		
 		driver = new FirefoxDriver();
 		
+		driver.manage().window().maximize();
+		
 		driver.get(url);
 		
 		Thread.sleep(5000);

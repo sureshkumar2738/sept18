@@ -25,12 +25,14 @@ public class rediff_screenshots {
 			WebDriverManager.firefoxdriver().setup();
 			
 		 driver = new FirefoxDriver();
+		 
+		 driver.manage().window().maximize();
 			
 			driver.get(url);
 			
 			Thread.sleep(3000);
 			
-screenshot("C:\\Users\\SURESH\\eclipse-workspace\\sept18\\src\\test\\resources\\screenshotes"+
+screenshot("C:\\Users\\hp\\Suresh\\sept18\\src\\test\\resources\\screenshotes"+
 GetCurrentTimeStamp().replace(".", "_").replace(":", "_")+".jpg");
 			
 			driver.quit();
