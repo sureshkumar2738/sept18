@@ -19,7 +19,7 @@ public class rediff_screenshots {
 	public static WebDriver driver;
 	public static void main(String[] args) throws IOException {
 		
-		System.out.println(System.getProperty("user.dir"));
+		//System.out.println(System.getProperty("user.dir"));
 		
 		try {
 			WebDriverManager.firefoxdriver().setup();
@@ -43,16 +43,15 @@ GetCurrentTimeStamp().replace(".", "_").replace(":", "_")+".jpg");
 
 	}
 	
-	public static void screenshot(String path) throws IOException
-	{
+	public static void screenshot(String path) throws IOException {
 		
 	File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	 FileUtils.copyFile(screenshotFile, new File(path));
 	 
 	}
 	
-	public static String GetCurrentTimeStamp()
-	{
+	public static String GetCurrentTimeStamp() {
+		
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 		Date now = new Date();
 		String strdate = sdfDate.format(now);

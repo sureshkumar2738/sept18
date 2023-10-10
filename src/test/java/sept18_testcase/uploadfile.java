@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,9 +18,9 @@ public class uploadfile {
 	
 	public static void main(String[] args) {
 
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver().setup();
 		
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		
 		driver.get(url);
 		
@@ -27,9 +28,11 @@ public class uploadfile {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
+		//driver.findElement(By.xpath("//input[@id='myFile']")).click();
 		WebElement uploadfile = driver.findElement(By.xpath("//input[@id='myFile']"));
-		
-		uploadfile.sendKeys("C:\\Users\\SURESH\\eclipse-workspace\\Downloads\\pan card.pdf");
+		uploadfile.click();
+		//uploadfile.sendKeys("C:\\Users\\SURESH\\eclipse-workspace\\Downloads\\pan card.pdf");
+		uploadfile.sendKeys("C:\\Users\\hp\\Downloads\\Suresh Kumar- Resume");
 		
 		driver.quit();
 		
