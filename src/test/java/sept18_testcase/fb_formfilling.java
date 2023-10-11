@@ -20,21 +20,23 @@ public class fb_formfilling {
 		 
 		 WebDriver driver = new ChromeDriver();
 		
+		 driver.manage().window().maximize();
+		 
 		 driver.get(url);
 		
-		driver.findElement(By.linkText("Create New Account")).click();
+		driver.findElement(By.xpath("//*[@data-testid='open-registration-form-button']")).click();
 		
-	    Thread.sleep(5000);
+	    Thread.sleep(3000);
 	    
-	    driver.findElement(By.id("u_1_b")).sendKeys("suresh");
+	    driver.findElement(By.xpath("//*[@aria-label='First name']")).sendKeys("suresh");
 	    
 	    Thread.sleep(3000);
 	    
-	    driver.findElement(By.id("u_1_d")).sendKeys("kumar");
+	    driver.findElement(By.xpath("//*[@aria-label='Surname']")).sendKeys("kumar");
 	    
 	    Thread.sleep(2000);
 		
-	    driver.findElement(By.id("u_1_g")).sendKeys("testlogin");
+	    driver.findElement(By.xpath("//*[contains(text(),'Mobile number or email address')]")).sendKeys("testlogin");
 	    
 	    Thread.sleep(2000);
 	    

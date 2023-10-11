@@ -5,8 +5,8 @@
     <classes>
       <class name="sept18_testcase.bankloan_testbase">
         <methods>
-          <include name="calculate"/>
           <include name="closebrowser"/>
+          <include name="calculate"/>
           <include name="startbrowser"/>
         </methods>
       </class> <!-- sept18_testcase.bankloan_testbase -->
