@@ -23,6 +23,8 @@ public static WebDriver driver;
 		
 		driver = new ChromeDriver();
 		
+		driver.manage().window().maximize();
+		
 		driver.get(url);
 		
 		Thread.sleep(5000);
