@@ -79,5 +79,4 @@ public class test_Base {
 		driver.manage().timeouts().pageLoadTimeout(test_utility.PAGELOADTIMEOUT, TimeUnit.SECONDS);
 	
 	}
-	
 }

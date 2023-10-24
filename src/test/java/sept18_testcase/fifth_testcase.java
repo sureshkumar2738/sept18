@@ -21,6 +21,5 @@ public class fifth_testcase extends first_testcase {
 		//Assert.fail("message");
 		System.out.println("end of test");
 		sft.assertAll();
-	}
-	
+	}	
 }
