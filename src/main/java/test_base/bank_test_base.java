@@ -43,22 +43,19 @@ public class bank_test_base {
 	public static void inilization() {
 		
 		String browsername = prop.getProperty("txt_browser");
-		if(browsername.equalsIgnoreCase("chrome")) {
-			
+
+		if(browsername.equalsIgnoreCase("chrome")) {	
 		WebDriverManager.chromedriver().setup();
-		
 		  driver = new ChromeDriver();
 		}
 		   
 		else if(browsername.equalsIgnoreCase("firefox")) {
            WebDriverManager.firefoxdriver().setup();
-		
 		  driver = new FirefoxDriver();
 		  }
 		
 		   else if(browsername.equalsIgnoreCase("ie")) {
 			   WebDriverManager.iedriver().setup();
-			   
 			   driver = new InternetExplorerDriver();
 		   }
 		
@@ -67,13 +64,9 @@ public class bank_test_base {
 		   }
 		   
 		driver.get(prop.getProperty("URL"));
-		
 		driver.manage().window().maximize();
-		
 		driver.manage().timeouts().implicitlyWait(testutil.IMPLICTWAITTIMEOUT, TimeUnit.SECONDS);
-		
 		driver.manage().timeouts().pageLoadTimeout(testutil.PAGELOADTIMEOUTTIME, TimeUnit.SECONDS);
-		
 		iwait= new WebDriverWait(driver, 10);
 	}
 }
