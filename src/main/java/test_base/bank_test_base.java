@@ -67,6 +67,7 @@ public class bank_test_base {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(testutil.IMPLICTWAITTIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(testutil.PAGELOADTIMEOUTTIME, TimeUnit.SECONDS);
-		iwait= new WebDriverWait(driver, 10);
+		
+		//iwait= new WebDriverWait(driver, 10);
 	}
 }
